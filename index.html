@@ -39,14 +39,6 @@
 	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="assets/images/magicAI-logo.svg" alt="logo"><span class="logo-text"><span class="text-alt">Documentation</span></span></a></div>
                 </div><!--//docs-logo-wrapper-->
 	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
-					<!--
-					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
-						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-		                <li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
-		                <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
-		            </ul>
-		            -->
 		            <a href="https://liquid-themes.com/" class="btn btn-primary d-none d-lg-flex m-1">Buy MagicAI</a>
 		            <a href="https://liquidthemes.freshdesk.com/support/tickets/new" class="btn btn-dark d-none d-lg-flex m-1">Help</a>
 	            </div><!--//docs-top-utilities-->
@@ -77,6 +69,12 @@
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="fas fa-box"></i></span>Upgrade</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Upgrade Files</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Open Upgrade URL</a></li>
+
+					<!--
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="fas fa-box"></i></span>Translation</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Upgrade Files</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Open Upgrade URL</a></li>
+					-->
 			    </ul>
 
 		    </nav><!--//docs-nav-->
@@ -111,6 +109,7 @@
 						<h3>Server Requirements</h3>
 						<ul>
 							<li class="me-1">PHP >= 8.1</li>
+							<li class="me-1">MariaDB >= 10.5 or(and) Mysql => 5.7.X</li>
 							<li class="me-1">Ctype PHP Extension</li>
 							<li class="me-1">cURL PHP Extension</li>
 							<li class="me-1">DOM PHP Extension</li>
@@ -125,6 +124,22 @@
 							<li class="me-1">Tokenizer PHP Extension</li>
 							<li class="me-1">XML PHP Extension</li>
 						</ul>
+						<div class="callout-block callout-block-warning">
+							<div class="content">
+								<h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <svg class="svg-inline--fa fa-bullhorn" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bullhorn" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M480 179.6C498.6 188.4 512 212.1 512 240C512 267.9 498.6 291.6 480 300.4V448C480 460.9 472.2 472.6 460.2 477.6C448.3 482.5 434.5 479.8 425.4 470.6L381.7 426.1C333.7 378.1 268.6 352 200.7 352H192V480C192 497.7 177.7 512 160 512H96C78.33 512 64 497.7 64 480V352C28.65 352 0 323.3 0 288V192C0 156.7 28.65 128 64 128H200.7C268.6 128 333.7 101 381.7 53.02L425.4 9.373C434.5 .2215 448.3-2.516 460.2 2.437C472.2 7.39 480 19.06 480 32V179.6zM200.7 192H192V288H200.7C280.5 288 357.2 317.8 416 371.3V108.7C357.2 162.2 280.5 192 200.7 192V192z"></path></svg><!-- <i class="fas fa-bullhorn"></i> Font Awesome fontawesome.com -->
+		                            </span><!--//icon-holder-->
+									It is recommended to increase PHP's max_execution_time.
+								</h4>
+								<p>See how to?
+									<a href="https://chemicloud.com/kb/article/how-to-increase-the-max_execution_time-limit-in-cpanel/">CPanel</a>,
+									<a href="https://www.plesk.com/kb/support/how-to-customize-php-settings-in-plesk-2/">Plesk</a>,
+									<a href="https://www.simplified.guide/php/increase-max-execution-time">Others (Linux Servers)</a>.
+
+								</p>
+							</div><!--//content-->
+						</div>
 						<div class="callout-block callout-block-warning">
 							<div class="content">
 								<h4 class="callout-title">
