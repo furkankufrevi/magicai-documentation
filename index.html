@@ -61,6 +61,7 @@
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">File Structure</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Server Requirements</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Create Database</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">Change Document Root</a></li>
 					<!--
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">Environment File (.env) (Optional)</a></li>
 				    -->
@@ -70,11 +71,12 @@
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Upgrade Files</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Open Upgrade URL</a></li>
 
-					<!--
+
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="fas fa-box"></i></span>Translation</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Upgrade Files</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Open Upgrade URL</a></li>
-					-->
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Languages Supported</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Activate Your Language</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">Activate Your Language</a></li>
+
 			    </ul>
 
 		    </nav><!--//docs-nav-->
@@ -123,6 +125,9 @@
 							<li class="me-1">Session PHP Extension</li>
 							<li class="me-1">Tokenizer PHP Extension</li>
 							<li class="me-1">XML PHP Extension</li>
+							<li class="me-1">PHP.ini => output_buffering = On</li>
+							<li class="me-1">PHP.ini => output_buffering = 4096</li>
+
 						</ul>
 						<div class="callout-block callout-block-warning">
 							<div class="content">
@@ -158,6 +163,17 @@
 					<section class="docs-section" id="item-2-3">
 						<h2 class="section-heading">Create A Database</h2>
 						<p>Create a database with <code>utf8mb4_general_ci</code> character encoding and give all permissions. Note your <code>database name, user name and password.</code></p>
+						<div class="callout-block callout-block-warning">
+							<div class="content">
+								<h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <svg class="svg-inline--fa fa-bullhorn" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bullhorn" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M480 179.6C498.6 188.4 512 212.1 512 240C512 267.9 498.6 291.6 480 300.4V448C480 460.9 472.2 472.6 460.2 477.6C448.3 482.5 434.5 479.8 425.4 470.6L381.7 426.1C333.7 378.1 268.6 352 200.7 352H192V480C192 497.7 177.7 512 160 512H96C78.33 512 64 497.7 64 480V352C28.65 352 0 323.3 0 288V192C0 156.7 28.65 128 64 128H200.7C268.6 128 333.7 101 381.7 53.02L425.4 9.373C434.5 .2215 448.3-2.516 460.2 2.437C472.2 7.39 480 19.06 480 32V179.6zM200.7 192H192V288H200.7C280.5 288 357.2 317.8 416 371.3V108.7C357.2 162.2 280.5 192 200.7 192V192z"></path></svg><!-- <i class="fas fa-bullhorn"></i> Font Awesome fontawesome.com -->
+		                            </span><!--//icon-holder-->
+									Warning
+								</h4>
+								<p> In Cpanel you should create database via "MySQL® Database Wizard" otherwise the permissions are not satisfied. </p>
+							</div><!--//content-->
+						</div>
 						<p>How to create database?</p>
 						<p>
 							<a href="https://www.godaddy.com/help/create-a-database-in-plesk-19176">Plesk</a>,
@@ -168,92 +184,48 @@
 						</p>
 					</section><!--//section-->
 
-					<!--
+
 					<section class="docs-section" id="item-2-4">
-						<h2 class="section-heading">Environment (.env) File</h2>
-						<p>There is an environment <code>(.env)</code> file at the root directory of the project. Open it with your IDE or text editor.</p>
+						<h2 class="section-heading">Change Document Root</h2>
 						<div class="callout-block callout-block-warning">
 							<div class="content">
 								<h4 class="callout-title">
 	                                <span class="callout-icon-holder me-1">
-		                                <svg class="svg-inline--fa fa-bullhorn" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bullhorn" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M480 179.6C498.6 188.4 512 212.1 512 240C512 267.9 498.6 291.6 480 300.4V448C480 460.9 472.2 472.6 460.2 477.6C448.3 482.5 434.5 479.8 425.4 470.6L381.7 426.1C333.7 378.1 268.6 352 200.7 352H192V480C192 497.7 177.7 512 160 512H96C78.33 512 64 497.7 64 480V352C28.65 352 0 323.3 0 288V192C0 156.7 28.65 128 64 128H200.7C268.6 128 333.7 101 381.7 53.02L425.4 9.373C434.5 .2215 448.3-2.516 460.2 2.437C472.2 7.39 480 19.06 480 32V179.6zM200.7 192H192V288H200.7C280.5 288 357.2 317.8 416 371.3V108.7C357.2 162.2 280.5 192 200.7 192V192z"></path></svg>
-		                            </span>
-									Warning
+		                                <svg class="svg-inline--fa fa-bullhorn" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bullhorn" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M480 179.6C498.6 188.4 512 212.1 512 240C512 267.9 498.6 291.6 480 300.4V448C480 460.9 472.2 472.6 460.2 477.6C448.3 482.5 434.5 479.8 425.4 470.6L381.7 426.1C333.7 378.1 268.6 352 200.7 352H192V480C192 497.7 177.7 512 160 512H96C78.33 512 64 497.7 64 480V352C28.65 352 0 323.3 0 288V192C0 156.7 28.65 128 64 128H200.7C268.6 128 333.7 101 381.7 53.02L425.4 9.373C434.5 .2215 448.3-2.516 460.2 2.437C472.2 7.39 480 19.06 480 32V179.6zM200.7 192H192V288H200.7C280.5 288 357.2 317.8 416 371.3V108.7C357.2 162.2 280.5 192 200.7 192V192z"></path></svg><!-- <i class="fas fa-bullhorn"></i> Font Awesome fontawesome.com -->
+		                            </span><!--//icon-holder-->
+									Document Root Needs to be Changed!
 								</h4>
-								<p>Make sure your IDE or your text editor uses <code>UTF-8</code> character encoding.</p>
-							</div>
+								<p>Change your document root to public folder of the magicAI. <code>/httpdocs/public</code> or <code>public_html/public</code>. See how to?
+									<a href="https://support.cpanel.net/hc/en-us/articles/360057802373-How-can-I-change-the-document-root-for-an-Addon-Domain-or-Subdomain-">CPanel</a>,
+									<a href="https://www.plesk.com/kb/support/how-to-change-the-document-root-for-a-single-domain-on-plesk-for-linux/">Plesk</a>.</p>
+							</div><!--//content-->
 						</div>
 
-						<p>It should look like this;</p>
+						<h3>If You can't change document root;</h3>
+						<p>Create .htaccess file at the root of the project.
+							<br>
+							Insert the data below to the .htaccess file.
+						</p>
 						<br>
 						<code>
-							APP_NAME=Laravel<br>
-							APP_ENV=production<br>
-							APP_KEY=base64:FNDGJM5KJ0nx9yhWVwu+EkJjMa+OXRESlbEQXPjO/FM=<br>
-							APP_DEBUG=false<br>
-							APP_URL=http://YOUR_SITE_URL<br>
-
-							LOG_CHANNEL=stack<br>
-							LOG_DEPRECATIONS_CHANNEL=null<br>
-							LOG_LEVEL=debug<br>
-
-							DB_CONNECTION=mysql<br>
-							DB_HOST=127.0.0.1<br>
-							DB_PORT=3306<br>
-							DB_DATABASE=magicai<br>
-							DB_USERNAME=root<br>
-							DB_PASSWORD=password<br>
-							<br>
-							BROADCAST_DRIVER=log<br>
-							CACHE_DRIVER=file<br>
-							FILESYSTEM_DISK=local<br>
-							QUEUE_CONNECTION=sync<br>
-							SESSION_DRIVER=file<br>
-							SESSION_LIFETIME=120<br>
-							<br>
-							MEMCACHED_HOST=127.0.0.1<br>
-							<br>
-							REDIS_HOST=127.0.0.1<br>
-							REDIS_PASSWORD=null<br>
-							REDIS_PORT=6379<br>
-							<br>
-							MAIL_MAILER=smtp<br>
-							MAIL_HOST=mailpit<br>
-							MAIL_PORT=1025<br>
-							MAIL_USERNAME=null<br>
-							MAIL_PASSWORD=null<br>
-							MAIL_ENCRYPTION=null<br>
-							MAIL_FROM_ADDRESS="hello@example.com"<br>
-							MAIL_FROM_NAME="${APP_NAME}"<br>
-							<br>
-							AWS_ACCESS_KEY_ID=<br>
-							AWS_SECRET_ACCESS_KEY=<br>
-							AWS_DEFAULT_REGION=us-east-1<br>
-							AWS_BUCKET=<br>
-							AWS_USE_PATH_STYLE_ENDPOINT=false<br>
-							<br>
-							<br>
-							VITE_PUSHER_APP_KEY="${PUSHER_APP_KEY}"<br>
-							VITE_PUSHER_HOST="${PUSHER_HOST}"<br>
-							VITE_PUSHER_PORT="${PUSHER_PORT}"<br>
-							VITE_PUSHER_SCHEME="${PUSHER_SCHEME}"<br>
-							VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"<br>
-
+							<strong><</strong>IfModule mod_rewrite.c> <br>
+								&nbsp RewriteEngine On <br>
+								&nbsp RewriteRule ^(.*)$ public/$1 [L] <br>
+							<strong><</strong>/IfModule>
 						</code>
 						<br>
-						<h5>Change fields with:</h5>
-						<ul>
-							<li><strong class="me-1">APP_URL</strong> <code>Your website's full url. For example; https://liquid-themes.com</code></li>
-							<li><strong class="me-1">DB_DATABASE:</strong> <code>Your database table's name.</code></li>
-							<li><strong class="me-1">DB_USERNAME:</strong> <code>Your database table's user name.</code></li>
-							<li><strong class="me-1">DB_PASSWORD:</strong> <code>Your database table's password.</code></li>
-						</ul>
 						<br>
-						<p>And save the .env file</p>
+
+						<p>In some cases cpanel hides files which start with .*
+							<br> You can show hidden files. <a href="https://support.cpanel.net/hc/en-us/articles/5085107370135-How-to-show-hidden-files-in-cPanel-File-Manager" target="_blank">See how to show hidden files.</a>
+						</p>
+
+						<p>And save the .htaccess file</p>
 					</section>
-		-->
+
 					<section class="docs-section" id="item-2-5">
 						<h2 class="section-heading">Install Script</h2>
+						<h3>Automatic Installation</h3>
 						<div class="callout-block callout-block-success">
 							<div class="content">
 								<h4 class="callout-title">
@@ -281,8 +253,40 @@
 						<p>To install the script;</p>
 						<ol>
 							<li>Go to: <code>https://yourdomainname.com/install-script</code></li>
+							<div class="callout-block callout-block-warning">
+								<div class="content">
+									<h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <svg class="svg-inline--fa fa-bullhorn" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bullhorn" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M480 179.6C498.6 188.4 512 212.1 512 240C512 267.9 498.6 291.6 480 300.4V448C480 460.9 472.2 472.6 460.2 477.6C448.3 482.5 434.5 479.8 425.4 470.6L381.7 426.1C333.7 378.1 268.6 352 200.7 352H192V480C192 497.7 177.7 512 160 512H96C78.33 512 64 497.7 64 480V352C28.65 352 0 323.3 0 288V192C0 156.7 28.65 128 64 128H200.7C268.6 128 333.7 101 381.7 53.02L425.4 9.373C434.5 .2215 448.3-2.516 460.2 2.437C472.2 7.39 480 19.06 480 32V179.6zM200.7 192H192V288H200.7C280.5 288 357.2 317.8 416 371.3V108.7C357.2 162.2 280.5 192 200.7 192V192z"></path></svg><!-- <i class="fas fa-bullhorn"></i> Font Awesome fontawesome.com -->
+		                            </span><!--//icon-holder-->
+										Warning
+									</h4>
+									<p> <strong>If you cannot access to /install-script directory you should go</strong> <a class="scrollto" href="#item-2-4"> previous section to Change Document Root</a> </p>
+								</div><!--//content-->
+							</div>
 							<li>Fill the form</li>
 							<li>Click to install button once.</li>
+							<div class="callout-block callout-block-warning">
+								<div class="content">
+									<h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <svg class="svg-inline--fa fa-bullhorn" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bullhorn" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M480 179.6C498.6 188.4 512 212.1 512 240C512 267.9 498.6 291.6 480 300.4V448C480 460.9 472.2 472.6 460.2 477.6C448.3 482.5 434.5 479.8 425.4 470.6L381.7 426.1C333.7 378.1 268.6 352 200.7 352H192V480C192 497.7 177.7 512 160 512H96C78.33 512 64 497.7 64 480V352C28.65 352 0 323.3 0 288V192C0 156.7 28.65 128 64 128H200.7C268.6 128 333.7 101 381.7 53.02L425.4 9.373C434.5 .2215 448.3-2.516 460.2 2.437C472.2 7.39 480 19.06 480 32V179.6zM200.7 192H192V288H200.7C280.5 288 357.2 317.8 416 371.3V108.7C357.2 162.2 280.5 192 200.7 192V192z"></path></svg><!-- <i class="fas fa-bullhorn"></i> Font Awesome fontawesome.com -->
+		                            </span><!--//icon-holder-->
+										Warning
+									</h4>
+									<p> <strong>If script doesn't install and return you back to the form, Please check;</strong>
+
+									<ul>
+										<li>
+											Check your database permissions.
+										</li>
+										<li>
+											Check your PHP version.
+										</li>
+									</ul>
+									</p>
+								</div><!--//content-->
+							</div>
 							<li>The installer will install the script.</li>
 						</ol>
 						<p>The installer will do rest of work and log you in to the panel. </p>
@@ -293,7 +297,96 @@
 
 						<p>After the installation fill the informations on the settings pages.</p>
 
+						<h3>Manual Installation</h3>
+						<ol>
+							<li>1-Edit .env file and fill the areas.</li>
+							<p>It should look like this;</p>
+							<br>
+							<code>
+								APP_NAME="MagicAI Liquid Themes"<br>
+								APP_ENV=production<br>
+								APP_KEY=base64:FNDGJM5KJ0nx9yhWVwu+EkJjMa+OXRESlbEQXPjO/FM=<br>
+								APP_DEBUG=false<br>
+								APP_URL=http://YOUR_SITE_URL<br>
+
+								LOG_CHANNEL=stack<br>
+								LOG_DEPRECATIONS_CHANNEL=null<br>
+								LOG_LEVEL=debug<br>
+
+								DB_CONNECTION=mysql<br>
+								DB_HOST=127.0.0.1<br>
+								DB_PORT=3306<br>
+								DB_DATABASE=magicai<br>
+								DB_USERNAME=root<br>
+								DB_PASSWORD="password"<br>
+								<br>
+								BROADCAST_DRIVER=log<br>
+								CACHE_DRIVER=file<br>
+								FILESYSTEM_DISK=local<br>
+								QUEUE_CONNECTION=sync<br>
+								SESSION_DRIVER=file<br>
+								SESSION_LIFETIME=120<br>
+								<br>
+								MEMCACHED_HOST=127.0.0.1<br>
+								<br>
+								REDIS_HOST=127.0.0.1<br>
+								REDIS_PASSWORD=null<br>
+								REDIS_PORT=6379<br>
+								<br>
+								MAIL_MAILER=smtp<br>
+								MAIL_HOST=mailpit<br>
+								MAIL_PORT=1025<br>
+								MAIL_USERNAME=null<br>
+								MAIL_PASSWORD=null<br>
+								MAIL_ENCRYPTION=null<br>
+								MAIL_FROM_ADDRESS="hello@example.com"<br>
+								MAIL_FROM_NAME="${APP_NAME}"<br>
+								<br>
+								AWS_ACCESS_KEY_ID=<br>
+								AWS_SECRET_ACCESS_KEY=<br>
+								AWS_DEFAULT_REGION=us-east-1<br>
+								AWS_BUCKET=<br>
+								AWS_USE_PATH_STYLE_ENDPOINT=false<br>
+								<br>
+								<br>
+								VITE_PUSHER_APP_KEY="${PUSHER_APP_KEY}"<br>
+								VITE_PUSHER_HOST="${PUSHER_HOST}"<br>
+								VITE_PUSHER_PORT="${PUSHER_PORT}"<br>
+								VITE_PUSHER_SCHEME="${PUSHER_SCHEME}"<br>
+								VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"<br>
+
+							</code>
+							<br>
+							<h5>Change fields with:</h5>
+							<ul>
+								<li><strong class="me-1">APP_NAME</strong> <code>Your website's name. If there is spaces add it between ". "Magicai Ai Writer"</code></li>
+								<li><strong class="me-1">APP_URL</strong> <code>Your website's full url. For example; https://liquid-themes.com</code></li>
+								<li><strong class="me-1">DB_DATABASE:</strong> <code>Your database table's name.</code></li>
+								<li><strong class="me-1">DB_USERNAME:</strong> <code>Your database table's user name.</code></li>
+								<li><strong class="me-1">DB_PASSWORD:</strong> <code>Your database table's password.</code></li>
+								<li><strong class="me-1">
+									MAIL_HOST <br>
+									MAIL_PORT<br>
+									MAIL_USERNAME<br>
+									MAIL_PASSWORD<br>
+									MAIL_ENCRYPTION<br>
+									MAIL_FROM_ADDRESS="hello@example.com"<br>
+									MAIL_FROM_NAME="${APP_NAME}"<br></strong> <code>Your smtp informations</code></li>
+							</ul>
+							<br>
+							<p>And save the .env file</p>
+
+							<li>Import the magicai.sql file to the database.</li>
+
+							<li>Done</li>
+						</ol>
+						<p>Login Information:
+							<br>Email: <code>admin@admin.com</code> <br>
+							Password: <code>12345678</code>
+						</p>
+
 					</section><!--//section-->
+
 
 					<section class="docs-section" id="item-2-6">
 						<h2 class="section-heading">Install Node.js (Optional)</h2>
